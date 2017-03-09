@@ -1,0 +1,103 @@
+html{
+	background: black;
+	
+}
+
+body {
+/*	background: black;
+	background-repeat: no-repeat;
+	background-size: 60% 170%;
+	background size: cover;
+*/}
+
+div{
+	/*margin-bottom: 5px;*/
+}
+
+#demo{
+	color: blue;
+}
+#wins{
+	color: blue;
+}
+
+*{
+	box-sizing: border-box;	
+	margin: 0 auto;
+	font-size: 48px;
+}
+
+
+header{
+	
+	background: black;
+	color: orange;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	font-size: 50px;
+	border-bottom: 1px solid blue;
+	
+
+}
+
+#row1 {
+background: black;
+/*max-width: 960px;*/
+/*width: 100%;*/
+/*opacity: 0.8;*/
+
+}
+
+#mainDiv{
+padding-top: 80px;
+color: red;
+font-weight: 700;
+font-size: 200%;
+text-align: center;
+/*margin: 0 auto;*/
+
+
+}
+
+#footDiv{
+	
+/*max-width: 980px;*/
+/*width: 100%;*/
+background: black;
+border-top: 1px solid blue;
+color: blue;
+font-weight: 700;
+font-size: 18px;
+text-align: center;
+padding-top: 40px;
+position: absolute;
+bottom: 0;
+font-size: 24px;
+}
+
+p{
+	font-size: 10px;
+	color: red;
+}
+
+#done{
+	font-size: 18px;
+	text-decoration: line-through;
+	color: lightgrey;
+}
+
+#notdone {
+	font-size: 16px;
+	text-decoration: underline;
+	color: black;
+}
+
+#pWin {
+	height: 30px;
+	font-size: 24px;
+}
+img {
+	height: 200px;
+	width: 200px;
+}
