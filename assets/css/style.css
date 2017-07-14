@@ -1,18 +1,8 @@
 html{
 	background: black;
-	
+	border: 0;
 }
 
-body {
-/*	background: black;
-	background-repeat: no-repeat;
-	background-size: 60% 170%;
-	background size: cover;
-*/}
-
-div{
-	/*margin-bottom: 5px;*/
-}
 
 #demo{
 	color: blue;
@@ -23,7 +13,7 @@ div{
 
 *{
 	box-sizing: border-box;	
-	margin: 0 auto;
+	/*margin: 0 auto;*/
 	font-size: 48px;
 }
 
@@ -34,46 +24,41 @@ header{
 	color: orange;
 	text-align: center;
 	font-weight: 700;
-	padding: 10px;
-	font-size: 50px;
-	border-bottom: 1px solid blue;
+	padding: 2%;
 	
+	font-size: 50px;
+	border-bottom: 5px solid blue;
+	text-shadow: 2px 3px slategrey;
 
 }
 
 #row1 {
 background: black;
-/*max-width: 960px;*/
-/*width: 100%;*/
-/*opacity: 0.8;*/
-
 }
 
 #mainDiv{
-padding-top: 80px;
+padding-top: 5%;
 color: red;
 font-weight: 700;
 font-size: 200%;
 text-align: center;
-/*margin: 0 auto;*/
-
-
 }
 
 #footDiv{
-	
-/*max-width: 980px;*/
-/*width: 100%;*/
 background: black;
-border-top: 1px solid blue;
+border: 0;
+border-top: 5px solid blue;
 color: blue;
 font-weight: 700;
 font-size: 18px;
 text-align: center;
-padding-top: 40px;
+/*padding: 5%;*/
 position: absolute;
 bottom: 0;
+margin: 0;
+margin-right: 0;
 font-size: 24px;
+width: 100%;
 }
 
 p{
@@ -94,10 +79,37 @@ p{
 }
 
 #pWin {
-	height: 30px;
+	height: 5%;
 	font-size: 24px;
 }
 img {
-	height: 200px;
-	width: 200px;
+	height: 20%;
+	width: 20%;
+}
+
+.bigDiv {
+padding: 3%;
+
+}
+
+
+
+
+@media only screen and (max-width: 760px) {
+
+
+
+}
+
+
+
+@media only screen and (max-width: 640px) {
+
+
+
+#start {
+	margin: 5%;
+}
+
+
 }

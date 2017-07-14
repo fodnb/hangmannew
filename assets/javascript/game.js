@@ -111,7 +111,7 @@ function checkLetters() {
         } else if (wrong === chosenWord.length) {
             document.getElementById('start').innerHTML = "WRONG!";
             missArray.push(userguess.toUpperCase());
-            document.getElementById('misses').innerHTML = "THESE ARE YOUR MISSED OPPORTUNITY:";
+            document.getElementById('misses').innerHTML = "WRONG GUESSES:";
             document.getElementById('graveyard').innerHTML = missArray.join(" ");
             guessesRemaining--;
             document.getElementById('tried').innerHTML = "You have " + guessesRemaining + " guesses left!";
