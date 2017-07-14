@@ -37,7 +37,7 @@ background: black;
 }
 
 #mainDiv{
-padding-top: 5%;
+/*padding-top: 5%;*/
 color: red;
 font-weight: 700;
 font-size: 200%;
@@ -53,12 +53,13 @@ font-weight: 700;
 font-size: 18px;
 text-align: center;
 /*padding: 5%;*/
-position: absolute;
+position: fixed;
 bottom: 0;
 margin: 0;
 margin-right: 0;
 font-size: 24px;
 width: 100%;
+margin-top: 20px;
 }
 
 p{
@@ -83,8 +84,8 @@ p{
 	font-size: 24px;
 }
 img {
-	height: 20%;
-	width: 20%;
+	height: 10%;
+	width: 10%;
 }
 
 .bigDiv {
