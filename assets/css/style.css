@@ -9,12 +9,20 @@ html{
 }
 #wins{
 	color: blue;
+	width: max-width;
+	text-align: left;
+}
+
+#losses{
+	color: red;
+	width: max-width;
+	text-align: left;
 }
 
 *{
 	box-sizing: border-box;	
 	/*margin: 0 auto;*/
-	font-size: 48px;
+	font-size: 30px;
 }
 
 
@@ -26,10 +34,16 @@ header{
 	font-weight: 700;
 	padding: 2%;
 	
-	font-size: 50px;
+	font-size: 30px;
 	border-bottom: 5px solid blue;
 	text-shadow: 2px 3px slategrey;
 
+}
+#pic{
+	height: 250px;
+	width: 250px;
+	/*float: left;*/
+	align-content: left;
 }
 
 #row1 {
@@ -42,6 +56,14 @@ color: red;
 font-weight: 700;
 font-size: 200%;
 text-align: center;
+font-size: 120px;
+float: right;
+width: 80%;
+}
+
+#smallDiv {
+	float: left;
+	width: 20%;
 }
 
 #footDiv{
@@ -93,7 +115,9 @@ padding: 3%;
 
 }
 
-
+div {
+	height: 10%;
+}
 
 
 @media only screen and (max-width: 760px) {

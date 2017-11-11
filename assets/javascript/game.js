@@ -1,26 +1,36 @@
-var night = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' '];
+// var night = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' '];
+// var x = 0;
+// var word = [];
+// var wins = 0;
+// var missArray = [];
+// var losses = 0;
 
 var word = ['PUMPKIN', 'CANDY', 'SKELETON', 'GHOUL', 'GOBLIN', 'COSTUME', 'GHOST', 'HALLOWEEN', 'VAMPIRE', 'ZOMBIE','GUILOTENE', 'TRICK', 'TREAT'];
+var chosenWord = word[Math.floor(Math.random() * word.length)];
+var count = 0;
 var win = 0;
 var loss = 0;
-
-var x = 0;
-var hitArray = [];
-var missArray = [];
+var correctGuesses = 0;
+var wrongGuesses = 0;
 var guessesRemaining = 6;
-var correct = 0;
-var wrongGuesses;
+var guessguessed = 0;
+
+
+var hitArray = [];
 var answerArray = [];
 var missArray = [];
-// var word = [];
-var wins = 0;
-var losses = 0;
-var chosenWord = word[Math.floor(Math.random() * word.length)];
-console.log(night.length);
-var guessguessed = 0;
+var letters = [];
+
 var dashes;
-var count = 0;
 var differentNumbers;
+
+
+
+
+
+
+
+
 
 function startGame() {
 
@@ -29,11 +39,11 @@ function startGame() {
     $("#pWin").empty();
     $("#pLoss").empty();
 
-    // night = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' '];
-    night = ['A', 'B', 'C', 'D', 'E', 'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    letters = ['A', 'B', 'C', 'D', 'E', 'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     answerArray = [];
     missArray = [];
     hitArray = [];
+
     chosenWord = word[Math.floor(Math.random() * word.length)];
     document.getElementById('start').innerHTML = "TRY YOUR LUCK AT HANGMAN!";
     console.log(chosenWord);
@@ -49,7 +59,7 @@ function startGame() {
     differentNumbers = wordLength;
     lettersinword();
     console.log(differentNumbers + "differentNumbers");
-    correct = 0;
+    correctGuesses = 0;
     wrong = 0;
     guessesRemaining = 6;
    
@@ -97,9 +107,9 @@ function checkLetters() {
             answerArray[i] = userguess.toUpperCase();
           
             document.getElementById("demo").innerHTML = answerArray.join("  ");
-            correct++;
+            correctGuesses++;
 
-            console.log(night);
+            console.log(letters);
 
 
 
@@ -118,20 +128,20 @@ function checkLetters() {
             console.log(missArray);
         }
     }
-    if (correct >= 1) {
+    if (correctGuesses >= 1) {
 
         hitArray.push(userguess.toUpperCase());
     }
     wrong = 0;
-    correct = 0;
+    correctGuesses = 0;
 }
 
 function handlerGuess() {
 
-    if ((hitArray.length === chosenWord.length) || (differentNumbers === hitArray.length)) {//was differentletters
+    if ((hitArray.length === chosenWord.length) || (differentNumbers === hitArray.length)) {
 
         document.getElementById('start').innerHTML = "You WON!";
-        correct = 0;
+        correctGuesses = 0;
         win++;
         guessesRemaining = 6;
         document.getElementById('wins').innerHTML = "You've Won: " + win + " times!";
@@ -156,10 +166,10 @@ function checkArray(array) {
 }
 
 function midScreenLoss(){
-    night = [];
+    letters = [];
     loss = loss;
     console.log(win);
-    console.log(night); 
+    console.log(letters); 
     $("#demo").empty();
     $("#misses").empty();
     $("#tried").empty();
@@ -181,10 +191,10 @@ function midScreenLoss(){
 }
 
 function midScreenWin(){
-     night = [];
+     letters = [];
     win = win;
     console.log(win);
-    console.log(night);
+    console.log(letters);
     $("#demo").empty();
     $("#misses").empty();
     $("#tried").empty();
@@ -213,11 +223,11 @@ console.log(chosenWord);
 
 document.getElementById('start').innerHTML = "Choose Your Letters Wisely!"
 
-document.onkeypress = function(event) {
+document.onkeypress = function(event) { 
         guess = event.key;
         userguess = guess.toUpperCase();    
         console.log(userguess);
-        checkArray(night);
+        checkArray(letters);
 
 
         if (guessguessed > 0) {
