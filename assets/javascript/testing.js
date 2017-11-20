@@ -1,6 +1,10 @@
+
+
+
+
 var letters = ['A', 'B', 'C', 'D', 'E', 'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-// var words = ['PUMPKIN', 'CANDY', 'SKELETON', 'GHOUL', 'GOBLIN', 'COSTUME', 'GHOST', 'HALLOWEEEEN', 'VAMPIRE', 'ZOMBIE','GUILOTENE', 'TRICK', 'TREAT'];
-var words = ['PUMPKIN'];
+var words = ['PUMPKIN', 'CANDY', 'SKELETON', 'GHOUL', 'GOBLIN', 'COSTUME', 'GHOST', 'HALLOWEEEEN', 'VAMPIRE', 'ZOMBIE','GUILOTENE', 'TRICK', 'TREAT'];
+// var words = ['PUMPKIN'];
 var chosenWord = words[Math.floor(Math.random() * words.length)];
 var starts = 0;
 var hitArray = [];
@@ -9,6 +13,7 @@ var blankAnswer = [];
 var letters;
 var wins = 0;
 var losses = 0;
+
 
 var checkGuess = (guess) => {
 	var count = 0;
@@ -46,8 +51,8 @@ var startGame = () => {
 		$('#start').html('PLAY AGAIN!');
 		wins = 0;
 		losses =0;	
-			// words =  ['PUMPKIN', 'CANDY', 'SKELETON', 'GHOUL', 'GOBLIN', 'COSTUME', 'GHOST', 'HALLOWEEEEN', 'VAMPIRE', 'ZOMBIE','GUILOTENE', 'TRICK', 'TREAT'];
-			words = ['PUMPKIN'];
+			words =  ['PUMPKIN', 'CANDY', 'SKELETON', 'GHOUL', 'GOBLIN', 'COSTUME', 'GHOST', 'HALLOWEEEEN', 'VAMPIRE', 'ZOMBIE','GUILOTENE', 'TRICK', 'TREAT'];
+			// words = ['PUMPKIN'];
 			// $("#demo").empty();
 	}
 	letters = ['A', 'B', 'C', 'D', 'E', 'F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -70,6 +75,8 @@ var startGame = () => {
 	$("#tried").html(blankAnswer.toString().replace(/,/g, " "));
 	$("#wins").html(`Wins: ${wins}`);
 	$("#losses").html(`Losses: ${losses}`);
+	$('#demo').html('');
+
 	words = words.filter((word)=> {
 		return word != chosenWord;
 	})
@@ -120,11 +127,12 @@ var lose = (array) => {
 		case 7:
 		$("#hangman").html("H A N G M A N!");
 		$("#demo").html("YOU LOSE!");
-		$("#pic").attr("src", "assets/images/hangman8.jpg");
+		$("#pic").attr("src", "assets/images/hangmamimage.jpg");
 		losses++;	
 		setTimeout(startGame, 3000);
 		setTimeout(()=>{
 			$("#hangman").empty();
+			$("#demo").empty();
 		}, 3000);
 		break;
 
